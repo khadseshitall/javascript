@@ -1,0 +1,63 @@
+<html>
+	<body style="background-color: rgba(255, 140, 105, 0.418);"><</body>
+
+<head> 
+	<title>Payment Method</title>
+	<style>
+        <body> <p style="background-image:
+			url('s.jpg');">
+			</body>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+		input[type="text"], input[type="number"], input[type="date"], input[type="time"], select {
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+	<h1>Payment Method</h1>
+	<form action="submit-form.php" method="post">
+		<label for="name">Name on Card:</label>
+		<input type="text" id="name" name="name" required>
+		<label for="card-number">Card Number:</label>
+		<input type="number" id="card-number" name="card-number" required>
+		<label for="expiry-date">Expiry Date:</label>
+		<input type="date" id="expiry-date" name="expiry-date" required>
+		<label for="cvv">CVV:</label>
+		<input type="number" id="cvv" name="cvv" required>
+		<label for="payment-method">Payment Method:</label>
+		<select id="payment-method" name="payment-method">
+			<option value="phonepe">PhonePe</option>
+			<option value="google-pay">Google Pay</option>
+			<option value="credit-card">Credit Card</option>
+			<option value="debit-card">Debit Card</option>
+			<option value="net-banking">Net Banking</option>
+		</select>
+		<input type="submit" value="Pay Now">
+	</form>
+</body>
+</html>
+  
+
+

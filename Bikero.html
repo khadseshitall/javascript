@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rental Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333333;
+      text-align: center;
+    }
+    
+    .booking-form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .btn-submit {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .btn-submit:hover {
+      background-color: #45a049;
+    }
+    
+    .booking-summary {
+      margin-top: 20px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .booking-summary h2 {
+      color: #333333;
+    }
+    
+    .booking-summary p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rental Booking</h1>
+  
+  <div class="booking-form">
+    <div class="form-group">
+      <label for="bike-type">Bike Type:</label>
+      <select id="bike-type">
+        <option value="mountain">Mountain Bike</option>
+        <option value="road">Road Bike</option>
+        <option value="hybrid">Hybrid Bike</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="duration">Duration (in hours):</label>
+      <input type="number" id="duration" min="1" required>
+    </div>
+    
+    <button class="btn-submit" onclick="calculateCost()">Calculate Cost</button>
+  </div>
+  
+  <div id="booking-summary" class="booking-summary" style="display: none;">
+    <h2>Booking Summary</h2>
+    <p id="selected-bike"></p>
+    <p id="selected-duration"></p>
+    <p id="total-cost"></p>
+  </div>
+  
+  <script>
+    function calculateCost() {
+      var bikeType = document.getElementById("bike-type").value;
+      var

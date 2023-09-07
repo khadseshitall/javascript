@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bike Listings and Availability</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .filter {
+      margin-bottom: 10px;
+    }
+    
+    .listing {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .listing h2 {
+      margin-top: 0;
+    }
+    
+    .listing p {
+      margin-bottom: 5px;
+    }
+    
+    .listing .availability {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bike Listings and Availability</h1>
+  
+  <div class="filter">
+    <label for="location">Location:</label>
+    <select id="location">
+      <option value="">All</option>
+      <option value="New York">New York</option>
+      <option value="San Francisco">San Francisco</option>
+      <option value="London">London</option>
+      
+    </select>
+    
+    <label for="type">Type:</label>
+    <select id="type">
+      <option value="">All</option>
+      <option value="Mountain Bike">Mountain Bike</option>
+      <option value="Road Bike">Road Bike</option>
+      <option value="City Bike">City Bike</option>
+      
+    </select>
+  </div>
+  
+  <div id="listings">
+    <div class="listing">
+      <h2>Model 1</h2>
+      <p>Type: Mountain Bike</p>
+      <p>Hourly Rate: $10</p>
+      <p>Daily Rate: $30</p>
+      <p>Location: New York</p>
+      <p class="availability">Availability: Available</p>
+      <img src ="bike1.webp" width="200"height="200>"
+    </div>
+    
+    <div class="listing">
+      <h2>Model 2</h2>
+      <p>Type: Road Bike</p>
+      <p>Hourly Rate: $15</p>
+      <p>Daily Rate: $40</p>
+      <p>Location: San Francisco</p>
+      <p class="availability">Availability: Not Available</p>
+    </div>
+    
+    
+  </div>
+  
+  <script>
+    document.getElementById("location").addEventListener("change", filterListings);
+    document.getElementById("type").addEventListener("change",)
+    <!DOCTYPE html>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Rental Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f7f7f7;
+    }
+    
+    .form-group {
+      margin-bottom: 10px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    .form-group input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rental Booking</h1>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="bike">Select Bike:</label>
+        <select id="bike" name="bike">
+          <option value="bike1">Bike 1</option>
+          <option value="bike2">Bike 2</option>
+          <option value="bike3">Bike 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="duration">Duration (in hours):</label>
+        <input type="number" id="duration" name="duration" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="total-cost">Total Cost:</label>
+        <input type="text" id="total-cost" readonly>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Confirm Reservation">
+      </div>
+    </form>
+  </div>
+  
+  <script>
+    // Calculate the total cost based on bike and duration
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const bike = document.getElementById('bike').value;
+      const duration = parseInt(document.getElementById('duration').value); 
+      let cost;
+      document.getElementById('total-cost').value = cost;
+    });
+  </script>
+</body>
+</html>
