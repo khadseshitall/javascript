@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html>
+    <body style="background-color: rgba(105, 255, 235, 0.418);"><</body>
+
+<head>
+	<title>Car/Bike Booking with Payment</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+		input[type="text"], input[type="date"], input[type="time"], select {
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<h1>Car/Bike Booking with Payment</h1>
+	<form action="submit-form.php" method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required>
+		<label for="phone">Phone:</label>
+		<input type="text" id="phone" name="phone" required>
+		<label for="pickup-location">Pickup Location:</label>
+		<input type="text" id="pickup-location" name="pickup-location" required>
+		<label for="pickup-date">Pickup Date:</label>
+		<input type="date" id="pickup-date" name="pickup-date" required>
+		<label for="pickup-time">Pickup Time:</label>
+		<input type="time" id="pickup-time" name="pickup-time" required>
+		<label for="return-date">Return Date:</label>
+		<input type="date" id="return-date" name="return-date" required>
+		<label for="return-time">Return Time:</label>
+		<input type="time" id="return-time" name="return-time" required>
+		<label for="vehicle-type">
